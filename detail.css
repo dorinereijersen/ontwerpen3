@@ -1,0 +1,316 @@
+body {
+    margin: 0px;
+    height: 100vh;
+}
+
+/*---------------header------------------*/
+
+header {
+    position: fixed;
+    top: 2em;
+    left: 2em;
+    width: 100%;
+    height: 5vh;
+    z-index: 2;
+}
+
+header img {
+    width: 10em;
+    position: fixed;
+}
+
+/*---------------content------------------*/
+
+/*tekst*/
+
+.tekst {
+    width: 25em;
+    position: absolute;
+    left: 45em;
+    top: 5em;
+}
+
+.jaartal {
+    color: #D1AA8B;
+    font-family: 'Georgia Regular';
+    font-size: 3em;
+    margin-bottom: 0px;
+}
+
+.titel {
+    color: white;
+    font-family: 'Bree';
+    font-size: 3em;
+    margin-top: 0;
+}
+
+.bijschrift {
+    color: white;
+    font-family: 'Georgia';
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+blockquote {
+    margin-top: -5%;
+}
+
+blockquote p {
+    margin-top: 25%;
+}
+
+/*
+blockquote::before {
+    content: "\201C";
+    font-size: 5em;
+    color: #D1AA8B;
+    position: relative;
+    left: -.8em;
+    top: .5em;
+     
+}
+
+blockquote::after {
+    content: "\201D";
+    font-size: 6em;
+    
+    position: relative;
+    left: 3.5em;
+    
+}
+*/
+
+q::before {
+    animation: dancing 1s linear infinite;
+    display: inline-block;
+    transform: rotate(13deg);
+    color: #D1AA8B;
+    font-size: 5em;
+    position: absolute;
+    left: -0.1em;
+    top: 3.5em;
+}
+
+q::after {
+    animation: dancing 1s linear infinite;
+    display: inline-block;
+    transform: rotate(13deg);
+    color: #D1AA8B;
+    font-size: 5em;
+    position: absolute;
+    right: 0em;
+}
+
+@keyframes dancing {
+    0% {
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-13deg);
+    }
+
+    100% {
+        transform: rotate(13deg);
+    }
+}
+
+q {
+    quotes: "‘""’""“""”""‘""’""“""”";
+}
+
+#quoGev::before {
+    top: 4em;
+}
+#quoGev::after {
+    top: 5em;
+}
+#quoLim::before {
+    top: 4.3em;
+}
+#quoLim::after {
+    top: 5.9em;
+}
+#quoKind::before {
+    top: 2.8em;
+}
+#quoKind::after {
+    top: 4.8em;
+}
+#quoGeo::before {
+    top: 2.2em;
+}
+#quoGeo::after {
+    top: 2.9em;
+}
+#quoIsa::before {
+    top: 4em;
+}
+#quoIsa::after {
+    top: 5.2em;
+}
+#quoVet::before {
+    top: 4.2em;
+}
+#quoVet::after {
+    top: 5.4em;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(45deg);
+    }
+}
+
+/*breder beeld*/
+
+.slider {
+    width: 150vw;
+    height: 100vh;
+    /*  display: flex;*/
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#sliderTimo {
+    width: 140vw;
+}
+
+.slide {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#slide-1 {
+    background: rgb(22, 22, 22);
+    background: linear-gradient(rgba(22, 22, 22, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+/*foto's*/
+
+.fotos img:first-of-type {
+    width: 25%;
+    position: absolute;
+    right: -10%;
+    top: 7em;
+}
+
+#foto1 {
+    top: 10em;
+}
+
+#veteraan {
+    width: 50%;
+    right: -40%;
+    top: 10%;
+}
+
+#limburger {
+    width: 20%;
+    right: -10%;
+}
+
+#leger {
+    top: 45%;
+}
+
+#Protest {
+    top: 15%;
+}
+
+#protest {
+    right: -15%;
+    top: 55%;
+}
+
+#BLM {
+    top: 20%;
+    width: 20%;
+    right: -37%;
+}
+
+#man {
+    right: -15%;
+}
+
+#hood1 {
+    width: 20%;
+}
+
+#hood {
+    width: 20%;
+    right: -33%;
+    top: 35%;
+}
+
+#woodard {
+    width: 30%;
+    right: -15%;
+}
+
+.fotos img:nth-of-type(2) {
+    width: 25%;
+    position: absolute;
+    right: -38%;
+    top: 8em;
+}
+
+.fotos img:nth-of-type(3) {
+    width: 25%;
+    position: absolute;
+    right: -42%;
+    top: 25em;
+}
+
+#breathe {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*outlines*/
+
+.outline {
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+}
+
+#legerman {
+    left: 0%;
+    margin-bottom: -40%;
+}
+
+#kind {
+    top: 10em;
+    left: 0%;
+}
+
+#outlinesoldaat {
+    top: 10em;
+    left: 0%;
+}
+
+#outlinegev {
+    left: -15%;
+    top: 25%;
+}
+
+#floyd {
+    left: 0%;
+    top: 10em;
+}
+
+#timothy {
+    top: 10em;
+    left: -15%;
+}
+
+#slide1 {
+    width: 120vw;
+}

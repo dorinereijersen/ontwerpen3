@@ -1,0 +1,525 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+.hoogte {
+    
+}
+
+/*begin slide naar beneden*/
+.content {
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+*/
+    margin: 0 auto;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/begin.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-blend-mode: darken;
+}
+
+.content section img {
+    height: 80vh;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 5em;
+}
+
+.titelpagina {
+    font-size: 4em;
+    margin: 0px;
+}
+
+#calltoaction {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    left: 2em;
+    top: 18em;
+}
+
+#calltoaction h2:first-of-type {
+    font-family: 'Georgia';
+    color: #D1AA8B;
+}
+
+#calltoaction h2:nth-of-type(2) {
+    color: white;
+    font-family: 'Bree';
+    margin-left: 2em;
+    margin-top: 0;
+}
+section {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content svg {
+    width: 1.5em;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 42em;
+}
+.content svg #hand{
+    fill: rgba(255, 255, 255, 0.41);
+}
+
+.content svg #pijl{
+    fill: rgba(255, 255, 255, 0.94);
+    animation: beneden 1s infinite;
+}
+
+@keyframes beneden {
+    0% {
+    transform: translate(0px, -50px);    
+  }
+  100% {
+    transform: translate(0px 20px);
+  }
+}
+
+/*
+.bg {
+    transition: all .5s ease-in-out;
+    
+}
+.start {
+    -webkit-animation: flickerAnimation 2s infinite;
+    animation: flickerAnimation 2s infinite;
+    background-image: linear-gradient(rgba(7,8, 69, 0.1), rgba(255, 255, 255, 0.1));
+    padding: 0.5em;
+    box-shadow: 4px 4px 10px -5px rgba(0, 0, 0, 0.4);
+    border-radius: 5em;
+    
+}
+.box {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/begin.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-blend-mode: darken;
+    z-index: 998;
+}
+
+.content {
+    width: 12em;
+    height: 2rem;
+    text-align: center;
+    z-index: 999;
+    color: pink;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-family: Avenir-Medium;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+#made {
+    padding-top: 2em;
+    font-size: 1em;
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+*/
+
+/*algemeen*/
+
+header {
+    position: fixed;
+    top: 2em;
+    left: 2em;
+    width: 100%;
+    height: 5vh;
+    z-index: 2;
+}
+
+header img {
+    width: 10em;
+}
+
+/*tijdlijn*/
+
+.message {
+    background: rgb(22, 22, 22);
+    background: linear-gradient(rgba(22, 22, 22, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: #FFF;
+    position: absolute;
+    top: -130vh;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    padding: 20px;
+    transition: top .5s cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -2.5%;
+    margin-left: -2.25%;
+}
+
+#toggle {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    left: -100%;
+    top:- 100%;
+}
+
+#toggle + label {
+    position: absolute;
+    cursor: pointer;
+    padding: 10px;
+    background-image: url(images/tijdlijn/icon-15.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2em;
+    padding: 1.7%;
+    color: #FFF;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    margin: 0px;
+    transition: all 500ms ease;
+    right: 5%;
+}
+
+#toggle + label:after {
+    content: " "
+}
+
+.container {
+    transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    padding: 5em 3em;
+}
+
+#toggle:checked ~ .message {
+    top: 0;
+}
+
+#toggle:checked ~ .container {
+    margin-top: 10px;
+}
+
+#toggle:checked + label {
+    z-index: 1;
+}
+
+#toggle:checked + label:after {
+    content: ""
+}
+
+/*----------slider jaartallen----------*/
+
+p {
+    color: white;
+    font-family: bree, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+}
+
+/*de jaartallen*/
+
+* {
+    box-sizing: border-box;
+}
+
+.slide a {
+    color: #D1AA8B;
+    font-size: 20em;
+    font-family: 'Georgia';
+    margin: .1em 0em 0em 0em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.slides p:first-of-type {
+    color: white;
+    font-size: 3em;
+    font-family: 'Bree';
+}
+
+#slide-1 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/ely.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -200px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+#slide-2 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/soldaat.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -200px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+#slide-3 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/gevangene.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -200px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+#slide-4 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/limburger.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+#slide-5 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/veteraan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -150px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+#slide-6 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/kindjes/bruinekindjes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -150px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+#slide-7 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/timothyHood.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+#slide-8 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/isaac%20woodard.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+#slide-9 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/floyd/protest2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -150px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-blend-mode: darken;
+}
+
+.slide-container {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.slide {
+    scroll-snap-align: start;
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide svg {
+    width: 4%;
+    position: absolute;
+    top: 86em;
+}
+
+.slide svg #hand{
+    fill: rgba(255, 255, 255, 0.41);
+}
+
+.slide svg #pijl{
+    fill: rgba(255, 255, 255, 0.76);
+    animation: beweeg .8s infinite;
+}
+
+@keyframes beweeg {
+    0% {
+    transform: translate(-10px, 0);    
+  }
+  100% {
+    transform: translate(20px);
+  }
+}
+
+/*---------------timeline----------------*/
+
+.timeline {
+    margin: 20px auto;
+    width: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 64%;
+    background: #363636;
+    top: 12%;
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline ul li {
+    top: 0 em;
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 0px 50px;
+    box-sizing: border-box;
+/*    transition: all .2s ease-in-out;*/
+}
+
+.timeline ul li:nth-child(odd){
+    float: left;
+    text-align: right; 
+    clear: both;
+}
+.timeline ul li:nth-child(even){
+    float: right;
+    text-align: left;
+    clear: both;
+}
+.timeContent {
+    padding-bottom: 20px;
+}
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background: #D1AA8B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(209, 170, 139, 0.5);
+}
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background: #D1AA8B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(209, 170, 139, 0.5);
+}
+.timeline ul li h3 {
+    margin-top: 0%;
+    padding: 0;
+    font-weight: 600;
+    color: #D1AA8B;
+    font-family: 'Georgia';
+}
+
+.timeline ul li p {
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 1.5em;
+    font-family: 'Georgia';
+}
+.timeline ul li .time h4{
+    margin: 0;
+    padding: 0;
+}
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 12px;
+    right: -100px;
+    margin: 0;
+    padding: 8px 16px;
+    color: #D1AA8B;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px (233,33,99,0.3);
+}
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 12px;
+    left: -100px;
+    margin: 0;
+    padding: 8px 16px;
+    color: #D1AA8B;    
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px (233,33,99,0.3);
+}
+
+.timeline ul li a{
+    text-decoration: none;
+}
+
+.timeline ul li a div{
+    transition: all .2s ease-in-out; 
+}
+.timeline ul li a div:hover{
+    transform: scale(1.05);
+/*    transform: scaleY(1.2); */
+}
