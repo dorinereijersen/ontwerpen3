@@ -3,15 +3,25 @@ body {
     margin: 0;
 }
 
-.hoogte {}
+/*----------vertical scroll naar beneden----------*/
 
-/*begin slide naar beneden*/
+html {
+    scroll-snap-type: y mandatory;
+}
+
 .content {
-    /*
-    display: flex;
-    align-items: center;
-    justify-content: center;
-*/
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+.slide-container {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
+}
+
+.content {
     margin: 0 auto;
     height: 100vh;
     min-height: 100vh;
@@ -90,70 +100,7 @@ section {
     }
 }
 
-/*
-.bg {
-    transition: all .5s ease-in-out;
-    
-}
-.start {
-    -webkit-animation: flickerAnimation 2s infinite;
-    animation: flickerAnimation 2s infinite;
-    background-image: linear-gradient(rgba(7,8, 69, 0.1), rgba(255, 255, 255, 0.1));
-    padding: 0.5em;
-    box-shadow: 4px 4px 10px -5px rgba(0, 0, 0, 0.4);
-    border-radius: 5em;
-    
-}
-.box {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/begin.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: rgba(0, 0, 0, 0.4) !important;
-    background-blend-mode: darken;
-    z-index: 998;
-}
-
-.content {
-    width: 12em;
-    height: 2rem;
-    text-align: center;
-    z-index: 999;
-    color: pink;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    font-family: Avenir-Medium;
-    font-size: 1.6rem;
-    cursor: pointer;
-}
-
-#made {
-    padding-top: 2em;
-    font-size: 1em;
-}
-
-@keyframes flickerAnimation {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-*/
-
-/*algemeen*/
+/*----------header----------*/
 
 header {
     position: fixed;
@@ -168,7 +115,7 @@ header img {
     width: 10em;
 }
 
-/*tijdlijn*/
+/*----------tijdlijn icoon----------*/
 
 .message {
     background: rgb(22, 22, 22);
@@ -198,12 +145,11 @@ header img {
 #toggle + label {
     position: absolute;
     cursor: pointer;
-    padding: 10px;
-    background-image: url(images/tijdlijn/icon-15.png);
+    background-image: url(images/tijdlijn/tijdlijn-15.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 2em;
-    padding: 1.7%;
+    padding: 2%;
     color: #FFF;
     text-align: center;
     -webkit-font-smoothing: antialiased;
@@ -240,18 +186,16 @@ header img {
 
 /*----------slider jaartallen----------*/
 
+* {
+    box-sizing: border-box;
+}
+
 p {
     color: white;
     font-family: bree, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2.5em;
-}
-
-/*de jaartallen*/
-
-* {
-    box-sizing: border-box;
 }
 
 .slide a {
@@ -270,6 +214,9 @@ p {
 }
 
 #slide-1 {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     background-image: url(images/ely.jpg);
@@ -289,6 +236,9 @@ p {
     background-position: 0px -200px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 #slide-3 {
@@ -300,6 +250,9 @@ p {
     background-position: 0px -200px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 #slide-4 {
@@ -311,6 +264,9 @@ p {
     background-position: 0px 0px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 #slide-5 {
@@ -322,6 +278,9 @@ p {
     background-position: 0px -150px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 #slide-6 {
@@ -333,6 +292,9 @@ p {
     background-position: 0px -150px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 #slide-7 {
@@ -344,6 +306,9 @@ p {
     background-position: 0px -100px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 #slide-8 {
@@ -355,6 +320,9 @@ p {
     background-position: 0px 0px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 #slide-9 {
@@ -366,22 +334,21 @@ p {
     background-position: 0px -150px;
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
-}
-
-.slide-container {
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    display: flex;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: end;
 }
 
 .slide {
-    scroll-snap-align: start;
     min-width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+/*---------------gesture 2----------------*/
 
 .slide svg {
     width: 3em;
@@ -534,19 +501,4 @@ p {
 .timeline ul li a div:hover {
     transform: scale(1.05);
     /*    transform: scaleY(1.2); */
-}
-
-html {
-    scroll-snap-type: y mandatory;
-}
-
-.content {
-  height: 100vh;
-  width: 100vw;
-  scroll-snap-align: start;
-}
-.slide-container {
-  height: 100vh;
-  width: 100vw;
-  scroll-snap-align: end;
 }
