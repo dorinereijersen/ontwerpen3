@@ -2,9 +2,8 @@ body {
     background-color: black;
     margin: 0;
 }
-.hoogte {
-    
-}
+
+.hoogte {}
 
 /*begin slide naar beneden*/
 .content {
@@ -57,6 +56,7 @@ body {
     margin-left: 2em;
     margin-top: 0;
 }
+
 section {
     width: 50%;
     margin: 0 auto;
@@ -70,22 +70,24 @@ section {
     right: 0;
     top: 42em;
 }
-.content svg #hand{
+
+.content svg #hand {
     fill: rgba(255, 255, 255, 0.41);
 }
 
-.content svg #pijl{
+.content svg #pijl {
     fill: rgba(255, 255, 255, 0.94);
     animation: beneden 2.5s ease-out infinite;
 }
 
 @keyframes beneden {
     0% {
-    transform: translate(0px, -80px);    
-  }
-  100% {
-    transform: translate(0px 20px);
-  }
+        transform: translate(0px, -80px);
+    }
+
+    100% {
+        transform: translate(0px 20px);
+    }
 }
 
 /*
@@ -190,7 +192,7 @@ header img {
     appearance: none;
     cursor: pointer;
     left: -100%;
-    top:- 100%;
+    top: - 100%;
 }
 
 #toggle + label {
@@ -354,6 +356,7 @@ p {
     background-color: rgba(0, 0, 0, 0.6) !important;
     background-blend-mode: darken;
 }
+
 #slide-9 {
     display: flex;
     flex-direction: column;
@@ -384,22 +387,23 @@ p {
     width: 3em;
 }
 
-.slide svg #gesture{
+.slide svg #gesture {
     fill: rgba(255, 255, 255, 0.41);
 }
 
-.slide svg #pijl{
+.slide svg #pijl {
     fill: rgba(255, 255, 255, 0.76);
     animation: beweeg 2s ease-out infinite;
 }
 
 @keyframes beweeg {
     0% {
-    transform: translate(-10px, 0);    
-  }
-  100% {
-    transform: translate(90px);
-  }
+        transform: translate(-10px, 0);
+    }
+
+    100% {
+        transform: translate(90px);
+    }
 }
 
 /*---------------timeline----------------*/
@@ -411,6 +415,7 @@ p {
     box-sizing: border-box;
     overflow: hidden;
 }
+
 .timeline:before {
     content: '';
     position: absolute;
@@ -433,22 +438,25 @@ p {
     width: 50%;
     padding: 0px 50px;
     box-sizing: border-box;
-/*    transition: all .2s ease-in-out;*/
+    /*    transition: all .2s ease-in-out;*/
 }
 
-.timeline ul li:nth-child(odd){
+.timeline ul li:nth-child(odd) {
     float: left;
-    text-align: right; 
+    text-align: right;
     clear: both;
 }
-.timeline ul li:nth-child(even){
+
+.timeline ul li:nth-child(even) {
     float: right;
     text-align: left;
     clear: both;
 }
+
 .timeContent {
     padding-bottom: 20px;
 }
+
 .timeline ul li:nth-child(odd):before {
     content: '';
     position: absolute;
@@ -460,6 +468,7 @@ p {
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgba(209, 170, 139, 0.5);
 }
+
 .timeline ul li:nth-child(even):before {
     content: '';
     position: absolute;
@@ -471,6 +480,7 @@ p {
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgba(209, 170, 139, 0.5);
 }
+
 .timeline ul li h3 {
     margin-top: 0%;
     padding: 0;
@@ -485,10 +495,12 @@ p {
     font-size: 1.5em;
     font-family: 'Georgia';
 }
-.timeline ul li .time h4{
+
+.timeline ul li .time h4 {
     margin: 0;
     padding: 0;
 }
+
 .timeline ul li:nth-child(odd) .time {
     position: absolute;
     top: 12px;
@@ -497,27 +509,44 @@ p {
     padding: 8px 16px;
     color: #D1AA8B;
     border-radius: 18px;
-    box-shadow: 0 0 0 3px (233,33,99,0.3);
+    box-shadow: 0 0 0 3px (233, 33, 99, 0.3);
 }
+
 .timeline ul li:nth-child(even) .time {
     position: absolute;
     top: 12px;
     left: -100px;
     margin: 0;
     padding: 8px 16px;
-    color: #D1AA8B;    
+    color: #D1AA8B;
     border-radius: 18px;
-    box-shadow: 0 0 0 3px (233,33,99,0.3);
+    box-shadow: 0 0 0 3px (233, 33, 99, 0.3);
 }
 
-.timeline ul li a{
+.timeline ul li a {
     text-decoration: none;
 }
 
-.timeline ul li a div{
-    transition: all .2s ease-in-out; 
+.timeline ul li a div {
+    transition: all .2s ease-in-out;
 }
-.timeline ul li a div:hover{
+
+.timeline ul li a div:hover {
     transform: scale(1.05);
-/*    transform: scaleY(1.2); */
+    /*    transform: scaleY(1.2); */
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+.slide-container {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: end;
 }
