@@ -81,7 +81,7 @@ section {
 
 @keyframes beneden {
     0% {
-    transform: translate(0px, -50px);    
+    transform: translate(0px, -80px);    
   }
   100% {
     transform: translate(0px 20px);
@@ -390,7 +390,7 @@ p {
 
 .slide svg #pijl{
     fill: rgba(255, 255, 255, 0.76);
-    animation: beweeg .8s infinite;
+    animation: beweeg 2s ease-out infinite;
 }
 
 @keyframes beweeg {
@@ -398,7 +398,7 @@ p {
     transform: translate(-10px, 0);    
   }
   100% {
-    transform: translate(20px);
+    transform: translate(90px);
   }
 }
 
