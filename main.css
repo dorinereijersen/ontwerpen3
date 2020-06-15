@@ -76,7 +76,7 @@ section {
 
 .content svg #pijl{
     fill: rgba(255, 255, 255, 0.94);
-    animation: beneden 1s infinite;
+    animation: beneden 2.5s ease-out infinite;
 }
 
 @keyframes beneden {
@@ -381,12 +381,10 @@ p {
 }
 
 .slide svg {
-    width: 4%;
-    position: absolute;
-    top: 86em;
+    width: 3em;
 }
 
-.slide svg #hand{
+.slide svg #gesture{
     fill: rgba(255, 255, 255, 0.41);
 }
 
