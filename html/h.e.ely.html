@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+   <header>
         <a href="index.html">
             <img src="../images/logo.png" alt="logo Correspondent">
         </a>
@@ -20,7 +20,7 @@
             <div class="timeline">
                 <ul>
                     <li>
-                        <a class="timeContent" href="h.e.ely.html">
+                        <a class="timeContent" href="h.e.ely.html" onmouseenter="playAudio()">
                             <div>
                                 <h3>1925</h3>
                                 <p>H.E. Ely</p>
@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="timeContent" href="veteraan.html">
+                        <a class="timeContent" href="veteraan.html" onmouseenter="playVet()">
                             <div>
                                 <h3>1943</h3>
                                 <p>Veteraan</p>
@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="timeContent" href="gevangene.html">
+                        <a class="timeContent" href="gevangene.html" onmouseenter="playWC()">
                             <div>
                                 <h3>1945</h3>
                                 <p>Gevangene</p>
@@ -61,7 +61,7 @@
 
                     </li>
                     <li>
-                        <a class="timeContent" href="bruinekindjes.html">
+                        <a class="timeContent" href="bruinekindjes.html" onmouseenter="playKind()">
                             <div>
                                 <h3>1945</h3>
                                 <p>Bruine Kindjes</p>
@@ -70,7 +70,7 @@
 
                     </li>
                     <li>
-                        <a class="timeContent" href="timothy.html">
+                        <a class="timeContent" href="timothy.html" onmouseenter="playTimo()">
                             <div>
                                 <h3>1946</h3>
                                 <p>Timothy Hood</p>
@@ -79,7 +79,7 @@
 
                     </li>
                     <li>
-                        <a class="timeContent" href="isaac.html">
+                        <a class="timeContent" href="isaac.html" onmouseenter="playIsa()">
                             <div>
                                 <h3>1946</h3>
                                 <p>Isaac Woodard</p>
@@ -122,6 +122,26 @@
 
         </div>
     </div>
+    
+    
+    <audio id="audioEly">
+        <source src="../sounds/schrijven.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audioTimo">
+        <source src="../sounds/417345__inspectorj__gunshot-distant-a.wav" type="audio/wav">
+    </audio>
+    <audio id="audioVet">
+        <source src="../sounds/glass.wav" type="audio/wav">
+    </audio>
+    <audio id="audioWC">
+        <source src="../sounds/toilet.wav" type="audio/wav">
+    </audio>
+    <audio id="audioKind">
+        <source src="../sounds/kind.wav" type="audio/wav">
+    </audio>
+    <audio id="audioIsa">
+        <source src="../sounds/slaan.wav" type="audio/wav">
+    </audio>
 
 </body>
 <script type="../text/javascript" src="../text/typed.js"></script>

@@ -4,40 +4,38 @@
 /* eslint-env es6 */
 /* eslint-disable */
 
-//$.FullScreen(
-//move: '.wrapper'),
-//row: '.row',
-//nav: '.nav',
-//time: '1s',
-//type:'cubic-bezier(1,-0.12,0.44,0.99)',
-//navclass:'cursor'
-//
-//minHeight: 200;
-//
+//ely
+var audio2 = document.getElementById("audioEly");
+function playAudio() {
+  audio2.play();
+}
 
+//veteraan
+var audio3 = document.getElementById("audioVet");
+function playVet() {
+  audio3.play();
+}
 
-//const buttons = document.getElementsByTagName("button");
-//
-//for (const button of buttons) {
-//  button.addEventListener('click', () => {
-//     var id = button.getAttribute("id");
-//    
-//     var layerClass = "." + id + "-layer";
-//     var layers = document.querySelectorAll(layerClass);
-//     for (const layer of layers) {
-//       layer.classList.toggle("active");
-//     }
-//  });
-//}
+//gevangene
+var audio4 = document.getElementById("audioWC");
+function playWC() {
+  audio4.play();
+}
 
-/*eslint-env browser*/
-//document.getElementById("calltoaction").addEventListener("click", fire);
-//
-//function fire() {
-//    console.log('clicked');
-//    document.getElementById("contentBox").remove();
-//    document.getElementById("animateGif").play();
-//}
-    AOS.init( {
-        duration: 1000
-    });
+//kind
+var audio5 = document.getElementById("audioKind");
+function playKind() {
+  audio5.play();
+}
+
+//timothy
+var audio1 = document.getElementById("audioTimo");
+function playTimo() {
+  audio1.play();
+}
+
+//Isaac
+var audio6 = document.getElementById("audioIsa");
+function playIsa() {
+  audio6.play();
+}

@@ -6,9 +6,10 @@
     <title>Vergeten Soldaten</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="https://use.typekit.net/sqy1qqj.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body class="hoogte">
+<body>
     <header>
         <a href="index.html">
             <img src="../images/logo.png" alt="logo Correspondent">
@@ -19,7 +20,7 @@
             <div class="timeline">
                 <ul>
                     <li>
-                        <a class="timeContent" href="h.e.ely.html">
+                        <a class="timeContent" href="h.e.ely.html" onmouseenter="playAudio()">
                             <div>
                                 <h3>1925</h3>
                                 <p>H.E. Ely</p>
@@ -27,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="timeContent" href="veteraan.html">
+                        <a class="timeContent" href="veteraan.html" onmouseenter="playVet()">
                             <div>
                                 <h3>1943</h3>
                                 <p>Veteraan</p>
@@ -35,7 +36,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="timeContent" href="gevangene.html">
+                        <a class="timeContent" href="gevangene.html" onmouseenter="playWC()">
                             <div>
                                 <h3>1945</h3>
                                 <p>Gevangene</p>
@@ -60,7 +61,7 @@
 
                     </li>
                     <li>
-                        <a class="timeContent" href="bruinekindjes.html">
+                        <a class="timeContent" href="bruinekindjes.html" onmouseenter="playKind()">
                             <div>
                                 <h3>1945</h3>
                                 <p>Bruine Kindjes</p>
@@ -69,7 +70,7 @@
 
                     </li>
                     <li>
-                        <a class="timeContent" href="timothy.html">
+                        <a class="timeContent" href="timothy.html" onmouseenter="playTimo()">
                             <div>
                                 <h3>1946</h3>
                                 <p>Timothy Hood</p>
@@ -78,7 +79,7 @@
 
                     </li>
                     <li>
-                        <a class="timeContent" href="isaac.html">
+                        <a class="timeContent" href="isaac.html" onmouseenter="playIsa()">
                             <div>
                                 <h3>1946</h3>
                                 <p>Isaac Woodard</p>
@@ -98,13 +99,30 @@
         </div>
     </header>
 
+    <audio id="audioEly">
+        <source src="../sounds/schrijven.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audioTimo">
+        <source src="../sounds/417345__inspectorj__gunshot-distant-a.wav" type="audio/wav">
+    </audio>
+    <audio id="audioVet">
+        <source src="../sounds/glass.wav" type="audio/wav">
+    </audio>
+    <audio id="audioWC">
+        <source src="../sounds/toilet.wav" type="audio/wav">
+    </audio>
+    <audio id="audioKind">
+        <source src="../sounds/kind.wav" type="audio/wav">
+    </audio>
+    <audio id="audioIsa">
+        <source src="../sounds/slaan.wav" type="audio/wav">
+    </audio>
+
     <!--
    <section>
        <p class="typing">Duizenden zwarte soldaten hebben Europa bevrijd, maar hun gezichten zien we amper als we de oorlog herdenken.</p>
    </section>
 -->
-
-    <body>
 
         <section class="content">
             <section>
@@ -115,53 +133,75 @@
                 <h2 class="titelpagina">Soldaten</h2>
             </section>
             <section id="gesture">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145.43 308.69"><defs><style>.cls-1{fill:#fff;}</style></defs><g id="Gesture"><path id="hand" class="cls-1" d="M32.35,18C13.84,32,4.63,50.85,4.58,74c-.11,53.14,0,106.28,0,159.42,0,18.93,5.87,35.49,19.05,49.41,19.43,20.5,50.09,26.83,75.54,15,26.58-12.33,40.17-33.86,40.35-63.26.23-39.05.08-78.11,0-117.17,0-2.54-1.3-57.26-1.82-59.66A65.85,65.85,0,0,0,112,18.11C88.65.62,55.53.5,32.35,18Zm87.38,30.92a58.85,58.85,0,0,1,3.5,8.91c.7,2.29,2.34,56.33,2.34,58.62-.09,40.65.11,81.3-.19,122-.18,25-20.41,47.51-45.1,51C50.89,293.67,26,276.8,19,248a61.83,61.83,0,0,1-1.32-14.61q0-39.54,0-79.07c0-26.46,0-52.92,0-79.38,0-12,2.74-23.21,9.76-33.16A53.58,53.58,0,0,1,119.73,48.93Z"/><path id="pijl" class="cls-1" d="M63.69,227.22C60,223.46,56.32,219.62,52.5,216s-9.67-2.25-11.26,2.77a6.15,6.15,0,0,0,1.64,6.48c8,8.12,16.06,16.21,24.21,24.19,2.69,2.62,6.49,2.42,9.2-.27q11.47-11.35,22.82-22.86c3.29-3.34,3.39-7.65.47-10.56s-6.74-2.44-10.14.95c-3.58,3.57-7.13,7.18-11.33,11.41v-4q0-35.67,0-71.34a9.8,9.8,0,0,0-.84-5,6.74,6.74,0,0,0-7.34-3.33,6.2,6.2,0,0,0-5.23,5.32,25.62,25.62,0,0,0-.23,4.47q0,34.71,0,69.42v3.13Z"/></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145.43 308.69">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Gesture">
+                        <path id="hand" class="cls-1" d="M32.35,18C13.84,32,4.63,50.85,4.58,74c-.11,53.14,0,106.28,0,159.42,0,18.93,5.87,35.49,19.05,49.41,19.43,20.5,50.09,26.83,75.54,15,26.58-12.33,40.17-33.86,40.35-63.26.23-39.05.08-78.11,0-117.17,0-2.54-1.3-57.26-1.82-59.66A65.85,65.85,0,0,0,112,18.11C88.65.62,55.53.5,32.35,18Zm87.38,30.92a58.85,58.85,0,0,1,3.5,8.91c.7,2.29,2.34,56.33,2.34,58.62-.09,40.65.11,81.3-.19,122-.18,25-20.41,47.51-45.1,51C50.89,293.67,26,276.8,19,248a61.83,61.83,0,0,1-1.32-14.61q0-39.54,0-79.07c0-26.46,0-52.92,0-79.38,0-12,2.74-23.21,9.76-33.16A53.58,53.58,0,0,1,119.73,48.93Z" />
+                        <path id="pijl" class="cls-1" d="M63.69,227.22C60,223.46,56.32,219.62,52.5,216s-9.67-2.25-11.26,2.77a6.15,6.15,0,0,0,1.64,6.48c8,8.12,16.06,16.21,24.21,24.19,2.69,2.62,6.49,2.42,9.2-.27q11.47-11.35,22.82-22.86c3.29-3.34,3.39-7.65.47-10.56s-6.74-2.44-10.14.95c-3.58,3.57-7.13,7.18-11.33,11.41v-4q0-35.67,0-71.34a9.8,9.8,0,0,0-.84-5,6.74,6.74,0,0,0-7.34-3.33,6.2,6.2,0,0,0-5.23,5.32,25.62,25.62,0,0,0-.23,4.47q0,34.71,0,69.42v3.13Z" />
+                    </g>
+                </svg>
             </section>
         </section>
 
         <div class="slide-container">
             <div class="slide" id="slide-1">
-                <a href="h.e.ely.html">1925</a>
-                <p>H.E. Ely</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306.41 150.8"><defs><style>.cls-1{fill:#fff;}</style></defs><g id="Gesture"><path id="gesture" class="cls-1" d="M289.34,34.29c-14-18.51-32.84-27.72-56-27.77-53.14-.11-106.29,0-159.43,0-18.92,0-35.49,5.87-49.4,19.05C4,45-2.31,75.62,9.5,101.07c12.32,26.58,33.85,40.17,63.25,40.35,39.06.23,78.11.08,117.17,0,2.55,0,57.26-1.3,59.66-1.83A65.81,65.81,0,0,0,289.24,114C306.73,90.59,306.84,57.47,289.34,34.29Zm-30.93,87.38a59.15,59.15,0,0,1-8.9,3.5c-2.29.7-56.34,2.34-58.62,2.34-40.66-.09-81.31.11-122-.19-25-.18-47.51-20.41-51-45.1-4.21-29.39,12.65-54.3,41.51-61.3A61.78,61.78,0,0,1,74,19.6q39.52,0,79.06,0c26.46,0,52.92,0,79.39,0,12,0,23.2,2.74,33.15,9.76A53.58,53.58,0,0,1,258.41,121.67Z"/><path id="pijl" class="cls-1" d="M139.07,65.63c-3.76-3.73-7.6-7.37-11.26-11.19s-2.25-9.67,2.77-11.26a6.15,6.15,0,0,1,6.48,1.64c8.11,8,16.21,16.06,24.19,24.21,2.62,2.69,2.42,6.49-.27,9.2q-11.35,11.47-22.86,22.82c-3.34,3.29-7.65,3.39-10.56.47s-2.44-6.74.95-10.14c3.57-3.58,7.18-7.13,11.41-11.33H64.53a9.78,9.78,0,0,1-5-.84,6.74,6.74,0,0,1-3.33-7.34,6.19,6.19,0,0,1,5.32-5.23A25.5,25.5,0,0,1,66,66.42h72.56Z"/></g></svg>
+                <a href="h.e.ely.html" data-aos="fade-up">1925</a>
+                <p data-aos="fade-up">H.E. Ely</p>
             </div>
             <div class="slide" id="slide-2">
-                <a href="veteraan.html">1943</a>
-                <p>Veteraan</p>
+                <a data-aos="fade-up" href="veteraan.html">1943</a>
+                <p data-aos="fade-up">Veteraan</p>
             </div>
             <div class="slide" id="slide-3">
-                <a href="gevangene.html">1945</a>
-                <p>Gevangene</p>
+                <a data-aos="fade-up" href="gevangene.html">1945</a>
+                <p data-aos="fade-up">Gevangene</p>
             </div>
             <div class="slide" id="slide-4">
-                <a href="limburger.html">1945</a>
-                <p>Limburger</p>
+                <a data-aos="fade-up" href="limburger.html">1945</a>
+                <p data-aos="fade-up">Limburger</p>
             </div>
             <div class="slide" id="slide-5">
-                <a href="veteraan2.html">1945</a>
-                <p>Veteraan</p>
+                <a data-aos="fade-up" href="veteraan2.html">1945</a>
+                <p data-aos="fade-up">Veteraan</p>
             </div>
             <div class="slide" id="slide-6">
-                <a href="bruinekindjes.html">1945</a>
-                <p>'Bruine' kindjes</p>
+                <a data-aos="fade-up" href="bruinekindjes.html">1945</a>
+                <p data-aos="fade-up">'Bruine' kindjes</p>
             </div>
             <div class="slide" id="slide-7">
-                <a href="timothy.html">1946</a>
-                <p>Timothy Hood</p>
+                <a data-aos="fade-up" href="timothy.html">1946</a>
+                <p data-aos="fade-up">Timothy Hood</p>
             </div>
             <div id="slide-8" class="slide">
-                <a href="isaac.html">1946</a>
-                <p>Isaac Woodard</p>
+                <a data-aos="fade-up" href="isaac.html">1946</a>
+                <p data-aos="fade-up">Isaac Woodard</p>
             </div>
             <div id="slide-9" class="slide">
-                <a href="george.html">2020</a>
-                <p>Racisme in 2020</p>
+                <a data-aos="fade-up" href="george.html">2020</a>
+                <p data-aos="fade-up">Racisme in 2020</p>
             </div>
         </div>
 
     </body>
 
-    <script type="text/javascript" src="../text/typed.js">
+   <script src="../text/typed.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        startEvent: 'DOMContentLoaded',
+        delay: 800, // vertraging voor effect (in milliseconden). Ik zou 800 doen, maar dat moet je zelf maar even bepalen
+        duration: 500, // duur van animatie (in milliseconden)
+        easing: 'ease-in-out', // easing voor animatie, je kan ook 'ease-in-out' of 'ease-in-cubic' gebruiken. Die zijn wel nice
+        once: false, // als je dit op true zet, zal de animatie steeds opnieuw getriggered worden
+      });
+      // zie https://github.com/michalsnik/aos/tree/v2#-animations voor meer opties
     </script>
+
 
 </html>

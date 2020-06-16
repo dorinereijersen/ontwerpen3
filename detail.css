@@ -51,6 +51,8 @@ header img {
     margin-bottom: 0px;
 }
 
+/*---------------blockquotes------------------*/
+
 blockquote {
     margin-top: -5%;
 }
@@ -58,27 +60,6 @@ blockquote {
 blockquote p {
     margin-top: 25%;
 }
-
-/*
-blockquote::before {
-    content: "\201C";
-    font-size: 5em;
-    color: #D1AA8B;
-    position: relative;
-    left: -.8em;
-    top: .5em;
-     
-}
-
-blockquote::after {
-    content: "\201D";
-    font-size: 6em;
-    
-    position: relative;
-    left: 3.5em;
-    
-}
-*/
 
 q::before {
     animation: dancing 1s linear infinite;
@@ -166,7 +147,7 @@ q {
     }
 }
 
-/*breder beeld*/
+/*---------------slider beeld------------------*/
 
 .slider {
     width: 150vw;
@@ -273,7 +254,7 @@ q {
     text-transform: uppercase;
 }
 
-/*outlines*/
+/*---------------outlines------------------*/
 
 .outline {
     position: relative;
@@ -298,6 +279,10 @@ q {
 
 #outlinegev {
     left: -15%;
+    top: 25%;
+}
+#outlineLim {
+    left: 0%;
     top: 25%;
 }
 
